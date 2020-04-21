@@ -657,6 +657,12 @@ impl pallet_vesting::Trait for Runtime {
 	type MinVestedTransfer = MinVestedTransfer;
 }
 
+impl pallet_sgx_hello_world::Trait for Runtime {
+	type Call = Call;
+	type Event = Event;
+	type SubmitTransaction = TransactionSubmitterOf<pallet_sgx_hello_world::crypto::Public>;
+}
+
 construct_runtime!(
 	pub enum Runtime where
 		Block = Block,
@@ -692,6 +698,7 @@ construct_runtime!(
 		Recovery: pallet_recovery::{Module, Call, Storage, Event<T>},
 		Vesting: pallet_vesting::{Module, Call, Storage, Event<T>, Config<T>},
 		Scheduler: pallet_scheduler::{Module, Call, Storage, Event<T>},
+		SgxEnclave: pallet_sgx_hello_world::{Module, Call, Storage, Event<T>, ValidateUnsigned},
 	}
 );
 

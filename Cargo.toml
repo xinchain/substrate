@@ -103,6 +103,7 @@ members = [
 	"frame/support/test",
 	"frame/system",
 	"frame/system/rpc/runtime-api",
+	"frame/sgx-hello-world",
 	"frame/timestamp",
 	"frame/transaction-payment",
 	"frame/transaction-payment/rpc",

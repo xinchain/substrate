@@ -3592,6 +3592,7 @@ dependencies = [
  "pallet-scheduler",
  "pallet-session",
  "pallet-session-benchmarking",
+ "pallet-sgx-hello-world",
  "pallet-society",
  "pallet-staking",
  "pallet-staking-reward-curve",
@@ -4483,6 +4484,21 @@ dependencies = [
  "pallet-staking",
  "pallet-staking-reward-curve",
  "pallet-timestamp",
+ "parity-scale-codec",
+ "serde",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-sgx-hello-world"
+version = "2.0.0-dev"
+dependencies = [
+ "frame-support",
+ "frame-system",
+ "lite-json",
  "parity-scale-codec",
  "serde",
  "sp-core",
